@@ -45,6 +45,7 @@ int main(){
 	int florMedicinal=0;
 	int plantaExtrana=0;
 	int mineralesPreciosos=0;
+	int amuleto=0;
 		
 	mostrarMenu();
 	cout<<"\n---Selecciona una opcion";
@@ -208,14 +209,16 @@ int main(){
 				cout<<"Flores medicinales: "<<florMedicinal<<endl;
 				cout<<"Plantas extrana: "<<plantaExtrana<<endl;
 				cout<<"Minerales preciosos: "<<mineralesPreciosos<<endl<<endl;
-				cout<<"Ademas recuperaste 6 de vida.\n";
-				vida=vida+6;
+				cout<<"Ademas recuperaste tu vida.\n";
+				vida=25;
 				cout<<"Vida total: "<<vida<<endl<<endl;
 				felicidad=felicidad+3;
 				
-				cout<<"Sin embargo al hacer esto algunos peregrinos mueren de hambre o por un golpe de calor -11 peregrinos";
+				cout<<"Sin embargo antes de llegar algunos peregrinos mueren de hambre o por un golpe de calor -11 peregrinos";
 				peregrinos=peregrinos-11;
 				cout<<endl<<"Peregrinos totales: "<<peregrinos;
+				cout<<endl<<endl;
+				system("pause"); 
 				break;
 				
 			case 2:
@@ -231,17 +234,18 @@ int main(){
 				switch(opcion2){
 					case 1:
 						cout<<endl;
-						cout<<"Logras huir, sin embargo pierdes 9 de vida y 10 peregrinos son asesinados";
+						cout<<"Logras huir, sin embargo pierdes 9 de vida y 10 peregrinos son asesinados\n";
 						vida=vida-9;
 						peregrinos=peregrinos-10;
 						cout<<"Vida total: "<<vida<<endl;
 						cout<<"Peregrinos: "<<peregrinos<<endl;
+						system("pause"); 
 						break;
 						
 					case 2:
 						cout<<endl;
 						cout<<"Decides atacar a los buitres\n";
-						numeroAletorio;
+						numeroAletorio=rand()%20+1;
 						if(numeroAletorio<=10){
 							cout<<"Provocaste a los buitres y te quitaron 11 de vida y 18 peregrinos fueron asesinados\n\n";
 							vida=vida-11;
@@ -250,9 +254,9 @@ int main(){
 							cout<<"Vida total: "<<vida<<endl;
 							cout<<"Peregrinos: "<<peregrinos<<endl;
 							system("pause"); 
-							break;
+							
 						}
-						if(numeroAletorio>10){
+							if(numeroAletorio>10){
 							cout<<endl;
 							cout<<"Lograste vencer a los cuervos y los usaron como alimento,sin embargo \nen la batalla murieron 3 peregrinos \n";
 							vida=20;
@@ -260,9 +264,11 @@ int main(){
 							cout<<"Vida total: "<<vida<<endl;
 							cout<<"Peregrinos: "<<peregrinos<<endl;
 							system("pause"); 
-							break;
+							
 						}	
+						break;
 					}
+				break;
 			case 3:
 				cout<<endl;
 				cout<<"Siguen con el ritmo, sin embargo mucho de los peregrinos no soportaron las duras condiciones por\n";
@@ -274,13 +280,97 @@ int main(){
 				system("pause"); 
 				break;
 		}
+		
+		system("cls");
+		cout<<endl;
+		cout<<"==== En el camino a la tierra prometida encuentran un pueblo       ==== \n";
+		cout<<"==== a lo lejos, por lo que todos te preguntan que deberian hacer. ==== \n";
+		cout<<"==== Tres opciones se presentan: ====\n\n";
+		cout<<"1. Intercambiar recursos con los pueblos amistosos.\n";
+		cout<<"2. Atacar el pueblo.\n";
+		cout<<"3. Evitar el contacto con el pueblo y continuar con el viaje.\n\n";
+		cout<<">> ";
+		cin>> opcion3;
+		
+		switch(opcion3){
+			
+			case 1:
+				if(plantaExtrana>=2&&mineralesPreciosos>0){
+					cout<<endl;
+					cout<<"Intercambian algunos resursos que tienes y el chamane del pueblo\n";
+					cout<<"te ayuda a tu objetivo, por lo que realizan un ritual y bendicen\n";
+					cout<<"un amuleto que los guiara a su destino\n\n";
+					cout<<"Vida total: "<<vida<<endl;
+					cout<<"Peregrinos: "<<peregrinos<<endl;
+					amuleto=1;
+					cout<<"Amuleto: "<<amuleto<<endl;
+					system("pause"); 
+					system("cls");
+				}
+				else{
+					cout<<"No tienes suficientes recursos para realaizar un intercambio, por lo que\n";
+					cout<<"algunos peregrinos se quedan y el pueblo los ayuda con comida y flores medicinales\n";
+					cout<<"-10 peregrinos\n";
+					cout<<"2-flores medicinales\n";
+					florMedicinal=florMedicinal+2;
+					peregrinos=peregrinos-29;
+					cout<<"Vida total: "<<vida<<endl;
+					cout<<"Peregrinos: "<<peregrinos<<endl;
+					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+					cout<<"amuleto "<<amuleto<<endl;
+					cout<<"Flores medicinales: "<<florMedicinal<<endl;
+					system("pause"); 
+					break;
+						
+				}
+					
+			case 2:
+				numeroAletorio=rand()%20+1;
+				if(numeroAletorio<=10){
+					cout<<"Fallan a la hora de atacar por lo que pierdes -15 de vida y mueren 30 peregrinos\n";
+					vida=vida-15;
+					peregrinos=peregrinos-30;
+					cout<<"Vida total: "<<vida<<endl;
+					cout<<"Peregrinos: "<<peregrinos<<endl;
+					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+					cout<<"Flores medicinales: "<<florMedicinal<<endl;
+					system("pause"); 
+					break;
+				}
+				else{
+					cout<<"Logran vencer y saquear al pueblo, pero en la pelea mueren 15 peregrinos\n";
+					cout<<"3-plantas enxtranas\n";
+					cout<<"2 plantas medicnales\n";
+					cout<<"20 aldeanos esclavizados\n";
+					vida=vida-7;
+					peregrinos=peregrinos-15+20;
+					cout<<"Vida total: "<<vida<<endl;
+					cout<<"Peregrinos: "<<peregrinos<<endl;
+					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+					cout<<"Flores medicinales: "<<florMedicinal<<endl;
+					system("pause"); 
+					break;
+				}
+				
+			case 3:
+				cout<<"Ignoran al pueblo y continuan con el viaje\n";
+				cout<<"Vida total: "<<vida<<endl;
+				cout<<"Peregrinos: "<<peregrinos<<endl;
+				cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+				cout<<"Flores medicinales: "<<florMedicinal<<endl;
+				system("pause"); 
+				break;
+				}
+		}
+		
 			
 		cout<<endl<<endl;
 		system("pause"); 
     	system("cls");
 		break;
-	}
-	
+		
 	}while(opcMenu != 5);
+	
+	}	
 
-}
+
