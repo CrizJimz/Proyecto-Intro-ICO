@@ -66,7 +66,8 @@ int main(){
 	
 		case 3:
 			cout<<endl<< "**** Contexto Historico: El Peregrinaje de Aztlan a Tenochtitlan ****" << endl<<endl;
-			cout<<"---La historia del peregrinaje de Aztlan a Tenochtitlan esta inspirada en lo \nhistorico y mitologico de la civilizacion azteca, tambien conocida como Mexica.";
+			cout<<"---La historia del peregrinaje de Aztlan a Tenochtitlan esta inspirada en lo \n";
+			cout<<"historico y mitologico de la civilizacion azteca, tambien conocida como Mexica.\n";
 			cout<<" \nEsta migracion legendaria se considera un episodio fundacional clave en la mitologia azteca,\n";
 			cout<<"estableciendo las bases para la grandiosa civilizacion que florecio en el Valle de Mexico. \n" ;
 		
@@ -306,6 +307,12 @@ int main(){
 					cout<<"Amuleto: "<<amuleto<<endl;
 					system("pause"); 
 					system("cls");
+					
+					
+					
+					
+					
+					
 				}
 				else{
 					cout<<"No tienes suficientes recursos para realaizar un intercambio, por lo que\n";
@@ -320,8 +327,7 @@ int main(){
 					cout<<"amuleto "<<amuleto<<endl;
 					cout<<"Flores medicinales: "<<florMedicinal<<endl;
 					system("pause"); 
-					break;
-						
+					break;	
 				}
 					
 			case 2:
@@ -360,17 +366,56 @@ int main(){
 				cout<<"Flores medicinales: "<<florMedicinal<<endl;
 				system("pause"); 
 				break;
-				}
 		}
+		do{
+		do{
+		system("cls");
+		cout<<endl;
+		cout<<"==== Siguen con el viaje sin embargo te sientes perdido ====\n";
+		cout<<"==== Tres opciones se presentan ====\n\n";
+		cout<<"1. Quedarse por donde estan y crear un campamento, esperando un senal.\n";
+		cout<<"2. Ir al sur.\n";
+		cout<<"3. Ir al este.\n\n";
+		cout<<">> ";
+		cin>>opcion4;
+		if(opcion4==1){
+		cout<<endl;
+		cout<<"Se quedan donde estan en el campamento improvisado en \n";
+		cout<<"la espera de uns senal, sin embargo no pasa nada\n\n";
+		system("pause");
+		}
+		}while(opcion4==1);
+		
+		switch(opcion4){
+			
+			case 2:
+				cout<<endl;
+				cout<<"Decides continuar su viaje por el sur\n\n";
+				system("Pause");
+				
+				break;
+			case 3:
+				cout<<endl;
+				cout<<"Decides continuar su viaje por el este\n\n";
+				system("Pause");
+				break;
+		
+		}
+		
+		}while(opcion4>3);
+		
 		
 			
 		cout<<endl<<endl;
+		cout<<"Has termiando el juego\n";
 		system("pause"); 
     	system("cls");
 		break;
 		
+	}
 	}while(opcMenu != 5);
 	
 	}	
+
 
 
