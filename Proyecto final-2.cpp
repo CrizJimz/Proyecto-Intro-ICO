@@ -40,12 +40,18 @@ int main(){
 		
 	int peregrinos=100;
 	int vida=25;
-	int felicidad=10;
+	
 	
 	int florMedicinal=0;
 	int plantaExtrana=0;
 	int mineralesPreciosos=0;
-	int amuleto=0;
+
+	
+	
+	
+	//AQUI PONERR EL IF DE LOS IDIOMAS
+	
+	
 		
 	mostrarMenu();
 	cout<<"\n---Selecciona una opcion";
@@ -174,12 +180,10 @@ int main(){
 					cout<<"Decides que es mejor buscar una ruta alternativa a pesar de ser mqs larga\n";
 					cout<<"por lo que despues de dia y medio logran encontrar otra ruta y continuan\n";
 					cout<<"con su viaje, sin embargo los peregrinos sienten molestia. \n\n";
-					felicidad=felicidad-4;
 					system("pause"); 
 					break;
 				
 				default:
-					
 					break;
 					
 			}
@@ -203,9 +207,11 @@ int main(){
 				cout<<"Por lo que despues de dias de busqueda logran encontrar un oasis lleno de recursos \n";
 				cout<<"Logran rebastecerse de alimento y de recursos en el oasis encuentran: \n\n";
 				cout<<"1-Minerales preciosos \n";
+				cout<<"1-Flor medicinal";
 				cout<<"2-Plantas Extranas \n\n";
 				mineralesPreciosos=mineralesPreciosos+1;
 				plantaExtrana=plantaExtrana+2;
+				florMedicinal=florMedicinal+1;
 				cout<<"Objetos totales: \n";
 				cout<<"Flores medicinales: "<<florMedicinal<<endl;
 				cout<<"Plantas extrana: "<<plantaExtrana<<endl;
@@ -213,7 +219,6 @@ int main(){
 				cout<<"Ademas recuperaste tu vida.\n";
 				vida=25;
 				cout<<"Vida total: "<<vida<<endl<<endl;
-				felicidad=felicidad+3;
 				
 				cout<<"Sin embargo antes de llegar algunos peregrinos mueren de hambre o por un golpe de calor -11 peregrinos";
 				peregrinos=peregrinos-11;
@@ -251,7 +256,6 @@ int main(){
 							cout<<"Provocaste a los buitres y te quitaron 11 de vida y 18 peregrinos fueron asesinados\n\n";
 							vida=vida-11;
 							peregrinos=peregrinos-18;
-							felicidad=felicidad-4;
 							cout<<"Vida total: "<<vida<<endl;
 							cout<<"Peregrinos: "<<peregrinos<<endl;
 							system("pause"); 
@@ -298,20 +302,72 @@ int main(){
 			case 1:
 				if(plantaExtrana>=2&&mineralesPreciosos>0){
 					cout<<endl;
-					cout<<"Intercambian algunos resursos que tienes y el chamane del pueblo\n";
-					cout<<"te ayuda a tu objetivo, por lo que realizan un ritual y bendicen\n";
-					cout<<"un amuleto que los guiara a su destino\n\n";
+					cout<<"Intercambian algunos resursos que tienes y el chaman del pueblo\n";
+					cout<<"te ayuda a tu objetivo, por lo que decide hacer un ritual y los\n";
+					cout<<"invita a particpiar\n\n";
+					plantaExtrana=plantaExtrana-2;
+					mineralesPreciosos=mineralesPreciosos-1;
+					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+					cout<<"Minerales preciosos: "<<mineralesPreciosos<<endl<<endl;
 					cout<<"Vida total: "<<vida<<endl;
 					cout<<"Peregrinos: "<<peregrinos<<endl;
-					amuleto=1;
-					cout<<"Amuleto: "<<amuleto<<endl;
 					system("pause"); 
+					do{
+					do{
 					system("cls");
+					cout<<endl;
+					cout<<"==== Durante la ceremonia sagrada, un chaman interpreta una profecía                 ====\n";
+					cout<<"==== que guiará el destino de los peregrinos y esta dice --La tierra que tanto       ====\n";
+					cout<<"==== buscan se encuentra al sur del poblado y su camino sera iluminado por las       ====\n";
+					cout<<"==== por las estrellas en la noche y en el día por el vuelo de las parvadas...--     ====\n";
+					cout<<"==== Tres opciones se presentan: \n\n";
+					cout<<"1. Seguir la dirección indicada por la profecia.\n";
+					cout<<"2. Cuestionar la validez de la profecía y seguir tu propio instinto.\n";
+					cout<<"3. Consultar al chaman por más detalles de la profecía\n\n";
+					cout<<">> ";
+					cin>> opcion4;
 					
+					switch(opcion4){
 					
+					case 1:
+						system("cls");
+						cout<<endl;
+						cout<<"Decides seguir las intrucciones del chaman y viajar por el sur junto a la guia de las\n";
+						cout<<"estrellas y las aves.\n";
+						cout<<"";
+						
+						//ACABAR PARTE DE LA HISTORIA 
+						
+					case 2:
+						system("cls");
+						cout<<endl;
+						cout<<"Decides ignorar el camino que dicta la profecia y decides tomar tu camino.\n\n";
+						system("pause");
+						break;
+						
+					case 3:
+						if(plantaExtrana>=1){
+							system("cls");
+							cout<<endl;
+							cout<<"El chaman logra obtener más detalles de la profecia la cual dice que el que\n";
+							cout<<"aquella tierra prometida la encontraran cuando vean a un aguila posada sobre un nopal\n";
+							cout<<"devorando un aguila.\n\n";
+							plantaExtrana=plantaExtrana-1;
+							system("pause");
+							break;	
+						}
+						else{
+							system("cls");
+							cout<<endl;
+							cout<<"El chaman no fue capaz de obtener más detalles para su viaje.\n\n";
+							system("pause");
+							break;
+						}
 					
+					}
 					
-					
+					}while(opcion4==3);
+					}while(opcion4>3);
 					
 				}
 				else{
@@ -324,7 +380,6 @@ int main(){
 					cout<<"Vida total: "<<vida<<endl;
 					cout<<"Peregrinos: "<<peregrinos<<endl;
 					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
-					cout<<"amuleto "<<amuleto<<endl;
 					cout<<"Flores medicinales: "<<florMedicinal<<endl;
 					system("pause"); 
 					break;	
@@ -341,14 +396,23 @@ int main(){
 					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
 					cout<<"Flores medicinales: "<<florMedicinal<<endl;
 					system("pause"); 
+						
+					if(vida<=0){
+						cout<<endl;
+						cout<<"Has muerto. Fin del juego\n\n";
+						system("pause");
+						return main();
+					}
 					break;
 				}
 				else{
 					cout<<"Logran vencer y saquear al pueblo, pero en la pelea mueren 15 peregrinos\n";
-					cout<<"3-plantas enxtranas\n";
-					cout<<"2 plantas medicnales\n";
-					cout<<"20 aldeanos esclavizados\n";
-					vida=vida-7;
+					cout<<"1-plantas enxtranas\n";
+					cout<<"4-plantas medicnales\n";
+					cout<<"20-aldeanos esclavizados\n";
+					plantaExtrana=plantaExtrana+1;
+					florMedicinal=florMedicinal+4;
+					vida=vida;
 					peregrinos=peregrinos-15+20;
 					cout<<"Vida total: "<<vida<<endl;
 					cout<<"Peregrinos: "<<peregrinos<<endl;
@@ -371,7 +435,7 @@ int main(){
 		do{
 		system("cls");
 		cout<<endl;
-		cout<<"==== Siguen con el viaje sin embargo te sientes perdido ====\n";
+		cout<<"==== Siguen con el viaje sin embargo te sientes perdido y no sabes a donde ir ====\n";
 		cout<<"==== Tres opciones se presentan ====\n\n";
 		cout<<"1. Quedarse por donde estan y crear un campamento, esperando un senal.\n";
 		cout<<"2. Ir al sur.\n";
@@ -393,11 +457,83 @@ int main(){
 				cout<<"Decides continuar su viaje por el sur\n\n";
 				system("Pause");
 				
+				system("cls");
+				cout<<endl;
+				cout<<"";
+				
+				
+				
+				
+						//AGREGAR OPCIONES FINALES	
 				break;
 			case 3:
 				cout<<endl;
 				cout<<"Decides continuar su viaje por el este\n\n";
 				system("Pause");
+				
+				system("cls");
+				cout<<endl;
+				cout<<"==== En tu transurso del viaje encuentras tres osbtaculos diferentes ====\n";
+				cout<<"==== los cuales no te permiten continuar                             ====\n";
+				cout<<"==== Que camino decides tomar? ====\n\n";
+				cout<<"1.Una gran cueva que al final se puede ver luz \n";
+				cout<<"2.Un tronco que sirve como puente para cruzar un risco \n";
+				cout<<"3.Un pantano que se ve bastante profundo \n";
+				cout<<">> ";
+				cin>>opcion5;
+				
+				switch(opcion5){
+					
+					case 1:
+						cout<<endl;
+						cout<<"Cruzas la gran cueva sin embargo se encuentra llena de insectos venenosos\n";
+						cout<<"y tu y muchos peregrinos son envenenandos\n";
+						
+						if(florMedicinal>=3){
+							cout<<endl;
+							cout<<"Sin embargo como tienen varias flores medicinales logran curar a todos\n\n";
+							cout<<"Al cruzar la cueva continuan su viaje y crean una nueva civilizacion,\n";
+							cout<<"sin emabrgo el lugar donde asentaron no era la tierra prometida, por \n";
+							cout<<"lo que la civilización no prospera como se esperaba.\n\n";
+							system("pause");
+							break;
+						}
+						else{
+							cout<<endl;
+							cout<<"Salen de la cueva e intentan continuar con el viaje pero casi todos los peregrinos\n";
+							cout<<"mueren junto contigo por lo que el viaje en la busqueda de la tierra prometida es un\n";
+							cout<<"fracaso. \n\n";
+							system("pause");
+							break;
+						}
+					case 2:
+						numeroAletorio=rand()%20+1;
+						if(numeroAletorio<=10){
+							cout<<endl;
+							cout<<"Tu y un grupo de peregrinos deciden cruzar primero, sin embargo a mitad del recorrido\n";
+							cout<<"el tronco se rompe por lo que tu y varios peregrinos caen muriendo. \n";
+							cout<<"Los peregrinos al quedarse sin lider intentan continuar con el viaje pero con el paso del tiempo\n";
+							cout<<"unos dejan el grupo y otros mueren. \n";
+							system("pause");
+							break;
+						}
+						else{
+							cout<<endl;
+							cout<<"Tu y un grupo de peregrinos deciden cruzar primero el tronco y lo logran, por lo que lo demas\n";
+							cout<<"peregrinos cruza y deciden continuar con su viaje y despues de meses de continuar viajando logran\n";
+							cout<<"asentarse, sin embargo no en la tierra prometida. \n";
+							system("pause");
+							break;
+						}
+					case 3:
+						cout<<endl;
+						cout<<"Decides cruzar por el lago, sin embargo mientras iban cruzando son atacados por cocodrilos salvajes\n";
+						cout<<"y en el ataque eres asesinado juntos con bastantes peregrinos ,por lo que los peregegrinos restantes se \n";
+						cout<<"quedan sin guia e intentar continuar con el viaje pero con el paso del tiempo unos dejan el grupo y otros mueren. \n";
+						system("pause");
+						break;
+				}
+				
 				break;
 		
 		}
@@ -407,15 +543,19 @@ int main(){
 		
 			
 		cout<<endl<<endl;
-		cout<<"Has termiando el juego\n";
+		cout<<"**** Has terminado el juego, gracias por jugar ****\n\n";
 		system("pause"); 
     	system("cls");
 		break;
 		
 	}
+	
 	}while(opcMenu != 5);
 	
 	}	
-
-
+					/*cout<<"Minerales preciosos: "<<mineralesPreciosos<<endl<<endl;
+					cout<<"Vida total: "<<vida<<endl;
+					cout<<"Peregrinos: "<<peregrinos<<endl;
+					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+					cout<<"Flores medicinales: "<<florMedicinal<<endl;	*/
 
