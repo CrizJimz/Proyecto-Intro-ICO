@@ -403,8 +403,56 @@ int main(){
 						cout<<"Elige una opcion ";
 						cout<<">> ";
 						cin>> opcion5;
-						//ACABAR PARTE DE LA HISTORIA 
 						
+						switch(opcion5){
+							
+							case 1:
+								numeroAletorio=rand()%20+1;
+								if(numeroAletorio<=12){
+									system("cls");
+									cout<<endl;
+									cout<<"Intentan limpiar la zona, sin embargo fracasan en su intento y la mayoria de peregrinos son\n";
+									cout<<"asesinado y huyen del lugar, por lo que el viaje a la tierra prometida fracasa ya que con el paso el timepo los\n";
+									cout<<"con el paso el timepo los pocos peregrinos restantes se dispersan y te abandonan \n\n";
+									system("pause");
+									cout<<"**** Has terminado el juego, gracias por jugar ****\n\n";
+									system("pause"); 
+									return main();
+								}
+								else{
+									system("cls");
+									cout<<endl;
+									cout<<"Logran limpiar la zona con exito y deciden asentar su nueva civilización ahí, logrando que crezca de forma\n";
+									cout<<"impresionante y convirtiendose en la legendaria Tenochtitlan...\n\n";
+									system("pause");
+									cout<<"**** Has terminado el juego, gracias por jugar ****\n\n";
+									system("pause"); 
+									return main();
+								}
+							break;
+							
+							case 2:
+								system("cls");
+								cout<<endl;
+							 	cout<<"Deciden buscar otro lugar para crear su pueblo abandonando la zona, sin embargo pasan asi anos buscando la tierra\n";
+							 	cout<<"prometida por lo que deciden asentarse en una zona al pacifico de la region, creando una civilizacion reconocida\n";
+							 	cout<<"pero no imponente... \n\n";
+							 	system("pause");
+								cout<<"**** Has terminado el juego, gracias por jugar ****\n\n";
+								system("pause"); 
+								return main();
+						
+							case 3:
+								system("cls");
+								cout<<endl;
+								cout<<"Deciden esperar dias a que lo animales se vayan,por lo que con el paso del tiepo se van y comienzan a asentar su\n";
+								cout<<"pueblo en el valle, convirterindose asi en la poderosa e imponennte Tenochtitlan...\n\n";
+								system("pause");
+								cout<<"**** Has terminado el juego, gracias por jugar ****\n\n";
+								system("pause"); 
+								return main();
+						}
+					
 					case 2:
 						system("cls");
 						cout<<endl;
@@ -735,7 +783,7 @@ int main(){
 	}
 	
 	}
-	/*
+	
 	if(idioma==2){
 		
 		monstrarMenuIng();
@@ -867,16 +915,609 @@ int main(){
 						system("pause"); 
 						break;	
 						
+					case 2:
+						cout<<"You decide that it is better to find an alternative route even though it is longer.\n";
+						cout<<"so after a day and a half they manage to find another route and continue\n";
+						cout<<"with their journey, however the pilgrims feel discomfort. \n\n";
+						cout<<"Total life: "<<vida<<endl;
+						cout<<"Pilgrims: "<<peregrinos<<endl<<endl;
+						if(florMedicinal>0){
+									cout<<"medicinal flowers: "<<florMedicinal<<endl;
+						}
+						if(plantaExtrana>0){
+							cout<<"strange plants: "<<plantaExtrana<<endl;
+						}
+						system("pause"); 
+						break;
+				
+				default:
+					break;
+					
+			}
+			}while(opcion1==3);
+			}while(opcion1>3||opcion1<1);	
+		do{
+		system("cls");
+		cout<<endl;
+		cout<<"==== The journey takes the pilgrims through an unforgiving     ==== \n";
+		cout<<"==== desert. Thirst and fatigue begin to affect the group.     ==== \n";
+		cout<<"==== Three options are presented: ====\n\n";
+		cout<<"1. Search for an oasis and resources in the desert.\n";
+		cout<<"2. Set a slower pace to conserve energy.\n";
+		cout<<"3. Continue at the same pace until you leave the desert.\n\n";
+		cout<<"Choose an option ";
+		cout<<">> ";
+		cin>> opcion2;
+		
+		switch(opcion2){
+			case 1:
+				cout<<endl;
+				cout<<"They slow their pace to see if anyone can see an oasis or resources. \n";
+				cout<<"So after days of searching they manage to find an oasis full of resources. \n";
+				cout<<"They manage to resupply themselves with food and resources in the oasis and find: \n\n";
+				cout<<"1-Precious minerals \n";
+				cout<<"1-medicinal flower";
+				cout<<"2-Strange Plants \n\n";
+				mineralesPreciosos=mineralesPreciosos+1;
+				plantaExtrana=plantaExtrana+2;
+				florMedicinal=florMedicinal+1;
+				cout<<"Total objects: \n";
+				cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+				cout<<"Strange plants: "<<plantaExtrana<<endl;
+				cout<<"Precious minerals: "<<mineralesPreciosos<<endl<<endl;
+				cout<<"Plus you got your life back.\n";
+				vida=25;
+				cout<<"Total life: "<<vida<<endl<<endl;
+				
+				cout<<"However, before arriving, some pilgrims die of hunger or heatstroke - 11 pilgrims";
+				peregrinos=peregrinos-11;
+				cout<<endl<<"Pilgrims: "<<peregrinos;
+				cout<<endl<<endl;
+				system("pause"); 
+				break;
+				
+			case 2:
+				cout<<endl;
+				cout<<"By slowing down they manage to manage their forces better, however in the\n";
+				cout<<"travel they encounter a flock of vultures that attack them \n\n";
+				cout<<"What are you going to do?\n\n";
+				cout<<"1. Escape\n";
+				cout<<"2. Attack\n";
+				cout<<"Choose an option ";
+				cout<<">> ";
+				cin>>opcion2;
+				
+				switch(opcion2){
+					case 1:
+						cout<<endl;
+						cout<<"You manage to escape, however you lose 9 life and 10 pilgrims are killed\n";
+						vida=vida-9;
+						peregrinos=peregrinos-10;
+						cout<<"Total life: "<<vida<<endl;
+						cout<<"Pilgrims: "<<peregrinos<<endl;
+						if(florMedicinal>0){
+							cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+						}
+						if(plantaExtrana>0){
+							cout<<"Strange plants: "<<plantaExtrana<<endl;
+						}
+						cout<<endl;
+						system("pause"); 
+						break;
 						
+					case 2:
+						cout<<endl;
+						cout<<"You decide to attack the vultures\n";
+						numeroAletorio=rand()%20+1;
+						if(numeroAletorio<=10){
+							cout<<"You provoked the vultures and they took 11 lives and 18 pilgrims were killed\n\n";
+							vida=vida-11;
+							peregrinos=peregrinos-18;
+							cout<<"Total life: "<<vida<<endl;
+							cout<<"Pilgrims: "<<peregrinos<<endl;
+							if(florMedicinal>0){
+								cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+							}
+							if(plantaExtrana>0){
+								cout<<"Strange plants: "<<plantaExtrana<<endl;
+							}
+							cout<<endl;
+							system("pause"); 
+						}
+						if(numeroAletorio>10){
+							cout<<endl;
+							cout<<"You managed to defeat the crows and used them as food, however 3 pilgrims died in the battle \n";
+							vida=20;
+							peregrinos=peregrinos-3;
+							cout<<"Total life: "<<vida<<endl;
+							cout<<"Pilgrims: "<<peregrinos<<endl;
+							if(florMedicinal>0){
+							cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+							}
+							if(plantaExtrana>0){
+								cout<<"Strange plants: "<<plantaExtrana<<endl;
+							}
+							cout<<endl;
+							system("pause"); 
+								
+						}	
+					break;
+				}
+				break;	
+				
+			case 3:
+				cout<<endl;
+				cout<<"They continue with the rhythm, however many of the pilgrims could not withstand the harsh conditions for\n";
+				cout<<"so many of them die on the way. -29 Pilgrims -3 life\n\n";
+				vida=vida-3;
+				peregrinos=peregrinos-29;
+				cout<<"Total life: "<<vida<<endl;
+				cout<<"Pilgrims: "<<peregrinos<<endl;
+				if(florMedicinal>0){
+					cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+				}
+				if(plantaExtrana>0){
+					cout<<"Strange plants: "<<plantaExtrana<<endl;
+				}
+				cout<<endl;
+				system("pause"); 
+				break;
+		}
+		}while(opcion2>3||opcion2<1);
+		
+		do{
+		system("cls");
+		cout<<endl;
+		cout<<"==== On the way to the promised land they find a town           ==== \n";
+		cout<<"==== in the distance, so everyone asks you what they should do. ==== \n";
+		cout<<"==== Three options are presented: ====\n\n";
+		cout<<"1. Exchange resources with friendly towns.\n";
+		cout<<"2. Attack the town.\n";
+		cout<<"3. Avoid contact with the town and continue with the trip.\n\n";
+		cout<<"Choose an option ";
+		cout<<">> ";
+		cin>> opcion3;		
+		
+		switch(opcion3){
+			
+			case 1:
+				if(plantaExtrana>=2&&mineralesPreciosos>0){
+					cout<<endl;
+					cout<<"Exchange some resources you have and the village shaman\n";
+					cout<<"helps you to your goal, so you decide to do a ritual and \n";
+					cout<<"he invites you to participate\n\n";
+					plantaExtrana=plantaExtrana-2;
+					mineralesPreciosos=mineralesPreciosos-1;
+					cout<<"strange plants: "<<plantaExtrana<<endl;
+					cout<<"Precious minerals: "<<mineralesPreciosos<<endl<<endl;
+					cout<<"Total life: "<<vida<<endl;
+					cout<<"Pilgrims: "<<peregrinos<<endl;
+					system("pause"); 
+					do{
+					do{
+					system("cls");
+					cout<<endl;
+					cout<<"==== During the sacred ceremony, a shaman interprets a prophecy  that will              ====\n";
+					cout<<"==== guide the destiny of the pilgrims and it says - The land that so much looking      ====\n";
+					cout<<"==== for is located to the south of the town and their path will be illuminated by the  ====\n";
+					cout<<"==== the by the stars at night and in the day by the flight of the flocks...--          ====\n";
+					cout<<"==== Three options are presented: \n\n";
+					cout<<"1. Follow the direction indicated by the prophecy.\n";
+					cout<<"2. Question the validity of the prophecy and follow your own instinct.\n";
+					cout<<"3. Consult the shaman for more details of the prophecy\n\n";
+					cout<<"Choose an option ";
+					cout<<">> ";
+					cin>> opcion4;
+					
+					switch(opcion4){
+					
+					case 1:
+						system("cls");
+						cout<<endl;
+						cout<<"You decide to follow the shaman's instructions and travel through the south with the guide of the\n";
+						cout<<"stars and birds.\n\n";
+						cout<<"Total life: "<<vida<<endl;
+						cout<<"Pilgrims: "<<peregrinos<<endl;
+						if(florMedicinal>0){
+							cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+						}
+						if(plantaExtrana>0){
+							cout<<"Strange plants: "<<plantaExtrana<<endl;
+						}
+						cout<<endl;
+						system("pause"); 
 						
+						system("cls");
+						cout<<endl;
+						cout<<"==== You reach where the birds and stars could guide you and you find a grea    ====\n";
+						cout<<"==== valley, however you see that this valley is full of dangerous animals      ====\n";
+						cout<<"==== Three options are presented ====\n\n";
+						cout<<"1. Clean the area of dangerous animals.\n";
+						cout<<"2. Find another area to settle your people.\n";
+						cout<<"3. Wait for the animals to leave.\n\n";
+						cout<<"Choose an option ";
+						cout<<">> ";
+						cin>> opcion5;
+						
+						switch(opcion5){
+							
+							case 1:
+								numeroAletorio=rand()%20+1;
+								if(numeroAletorio<=12){
+									system("cls");
+									cout<<endl;
+									cout<<"They try to clean the area, however they fail in their attempt and the majority of pilgrims are\n";
+									cout<<"murdered and flee the place, so the trip to the promised land fails since with the passage of time the\n";
+									cout<<"As time passes, the few remaining pilgrims disperse and abandon you. \n\n";
+									system("pause");
+									cout<<"**** You have finished the game, thanks for playing ****\n\n";
+									system("pause"); 
+									return main();
+								}
+								else{
+									system("cls");
+									cout<<endl;
+									cout<<"They manage to clean the area successfully and decide to settle their new civilization there, making it grow\n";
+									cout<<"impressive and becoming the legendary Tenochtitlan...\n\n";
+									system("pause");
+									cout<<"**** You have finished the game, thanks for playing ****\n\n";
+									system("pause"); 
+									return main();
+								}
+							break;
+							
+							case 2:
+								system("cls");
+								cout<<endl;
+							 	cout<<"They decide to look for another place to create their town, leaving the area, however they spend years searching for land.\n";
+							 	cout<<"promised so they decide to settle in an area in the Pacific region, creating a recognized civilization\n";
+							 	cout<<"but not imposing... \n\n";
+							 	system("pause");
+								cout<<"**** You have finished the game, thanks for playing ****\n\n";
+								system("pause"); 
+								return main();
+						
+							case 3:
+								system("cls");
+								cout<<endl;
+								cout<<"They decide to wait days for the animals to leave, so as time goes by they leave and begin to settle their\n";
+								cout<<"town in the valley, thus becoming the powerful and imposing Tenochtitlan...\n\n";
+								system("pause");
+								cout<<"**** You have finished the game, thanks for playing ****\n\n";
+								system("pause"); 
+								return main();
+						}
+					
+					case 2:
+						system("cls");
+						cout<<endl;
+						cout<<"You decide to ignore the path dictated by the prophecy and decide to take your own path.\n\n";
+						cout<<"Total life: "<<vida<<endl;
+						cout<<"Pilgrims: "<<peregrinos<<endl;
+						if(florMedicinal>0){
+							cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+						}
+						if(plantaExtrana>0){
+							cout<<"Strange plants: "<<plantaExtrana<<endl;
+						}
+						cout<<endl;
+						system("pause"); 
+						break;
+						
+					case 3:
+						if(plantaExtrana>=1){
+							system("cls");
+							cout<<endl;
+							cout<<"The shaman manages to obtain more details of the prophecy which says that he who seeks \n";
+							cout<<"the promised land will find it when he sees an eagle perched on a cactus devouring an eagle.\n\n";
+							plantaExtrana=plantaExtrana-1;
+							cout<<"Total life: "<<vida<<endl;
+							cout<<"Pilgrims: "<<peregrinos<<endl;
+							if(florMedicinal>0){
+								cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+							}
+							if(plantaExtrana>0){
+								cout<<"Strange plants: "<<plantaExtrana<<endl;
+							}
+							cout<<endl;
+							system("pause"); 
+							break;	
+						}
+						else{
+							system("cls");
+							cout<<endl;
+							cout<<"The shaman was not able to obtain any further details for his journey.\n\n";
+							cout<<"Total life: "<<vida<<endl;
+							cout<<"Pilgrims: "<<peregrinos<<endl;
+							if(florMedicinal>0){
+								cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+							}
+							if(plantaExtrana>0){
+								cout<<"Strange plants: "<<plantaExtrana<<endl;
+							}
+							cout<<endl;
+							system("pause"); 
+							break;
+						}
+					
+					}
+					
+					}while(opcion4==3);
+					}while(opcion4>3);
+					
+				}
+				else{
+					cout<<"You don't have enough resources to make an exchange, so\n";
+					cout<<"some pilgrims stay and the people help them with food, flowers and plants \n";
+					cout<<"-10 pilgrims\n";
+					cout<<"2-Medicinal flowers\n";
+					cout<<"2-Strange plants\n";
+					plantaExtrana=plantaExtrana+2;
+					florMedicinal=florMedicinal+2;
+					peregrinos=peregrinos-10;
+					cout<<"Total life: "<<vida<<endl;
+					cout<<"Pilgrims: "<<peregrinos<<endl;
+					if(florMedicinal>0){
+						cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+					}
+					if(plantaExtrana>0){
+						cout<<"Strange plants: "<<plantaExtrana<<endl;
+					}
+					cout<<endl;
+					system("pause");  
+					break;	
+				}
+				break;	
+			case 2:
+				numeroAletorio=rand()%20+1;
+				if(numeroAletorio<=10){
+					cout<<"They fail to attack so you lose -13 life and 30 pilgrims die\n";
+					vida=vida-13;
+					peregrinos=peregrinos-30;
+					cout<<"Total life: "<<vida<<endl;
+					cout<<"Pilgrims: "<<peregrinos<<endl;
+					if(florMedicinal>0){
+						cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+					}
+					if(plantaExtrana>0){
+						cout<<"Strange plants: "<<plantaExtrana<<endl;
+					}
+					cout<<endl;
+					system("pause"); 
+						
+					if(vida<=0){
+						cout<<endl;
+						cout<<"You have died. End of the game\n\n";
+						system("pause");
+						return main();
+					}
+					break;
+				}
+				else{
+					cout<<"They manage to defeat and plunder the town, but 15 pilgrims die in the fight.\n";
+					cout<<"3-strange plants\n";
+					cout<<"3-medical plants\n";
+					cout<<"20-enslaved villagers\n";
+					plantaExtrana=plantaExtrana+3;
+					florMedicinal=florMedicinal+3;
+					vida=vida;
+					peregrinos=peregrinos-15+20;
+					cout<<"Total life: "<<vida<<endl;
+					cout<<"Pilgrims: "<<peregrinos<<endl;
+					cout<<"Strange plants: "<<plantaExtrana<<endl;
+					cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+					system("pause"); 
+					break;
+				}
+				
+			case 3:
+				cout<<"They ignore the town and continue with the trip\n";
+				cout<<"Total life: "<<vida<<endl;
+				cout<<"Pilgrims: "<<peregrinos<<endl;
+				cout<<"Strange plants: "<<plantaExtrana<<endl;
+				cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+				system("pause"); 
+				break;
+		}
+		}while(opcion3>3||opcion3<1);	
+		
+		do{
+		do{
+		system("cls");
+		cout<<endl;
+		cout<<"==== They continue with the trip but you feel lost and don't know where to go. ====\n";
+		cout<<"==== Three options are presented ====\n\n";
+		cout<<"1. Stay where they are and create a camp, waiting for a signal.\n";
+		cout<<"2. Go south.\n";
+		cout<<"3. Go east.\n\n";
+		cout<<"Choose an option ";
+		cout<<">> ";
+		cin>>opcion4;
+		if(opcion4==1){
+			cout<<endl;
+			cout<<"They stay where they are in the makeshift camp in \n";
+			cout<<"waiting for a signal, but nothing happens\n\n";
+			cout<<"Total life: "<<vida<<endl;
+			cout<<"Pilgrims: "<<peregrinos<<endl;
+		if(florMedicinal>0){
+			cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+		}
+		if(plantaExtrana>0){
+			cout<<"Strange plants: "<<plantaExtrana<<endl;
+		}
+		cout<<endl;
+		system("pause"); 
+		}
+		}while(opcion4==1);
+		
+		switch(opcion4){
+			
+			case 2:
+				cout<<endl;
+				cout<<"You decide to continue your trip through the south\n\n";
+				cout<<"Total life: "<<vida<<endl;
+				cout<<"Pilgrims: "<<peregrinos<<endl;
+				if(florMedicinal>0){
+					cout<<"Medicinal flowers: "<<florMedicinal<<endl;
+				}
+				if(plantaExtrana>0){
+					cout<<"Strange plants: "<<plantaExtrana<<endl;
+				}
+				cout<<endl;
+				system("pause"); 
+				do{
+				do{
+				system("cls");
+				cout<<endl;
+				cout<<"==== On the trip you reach a point that catches your attention where you are able to see how   ====\n";
+				cout<<"==== Many eagles are found roaming around an area despite the great flood there is.            ====\n";
+				cout<<"==== Three options are presented ====\n";
+				cout<<"1. You consider it to be a sign, so you decide that civilization should settle there..\n";
+				cout<<"2. You continue traveling to continue looking for a perfect place to start your new civilization.\n";
+				cout<<"3. You decide to ask Huitzilopochtli for a sign to know what to do.\n\n";
+				cout<<"Choose an option ";
+				cout<<">> ";
+				cin>>opcion5;
+				
+				switch(opcion5){
+					case 1:
+						if(peregrinos>=52){
+							system("cls");
+							cout<<endl;
+							cout<<"You manage to settle a small town with quite a few pilgrims so it allows\n";
+							cout<<"that the growth of civilization is exceptional, becoming the\n";
+							cout<<"great Tenochtitlan...";
+							break;
+						}
+						else{
+							system("cls");
+							cout<<endl;
+							cout<<"You try to settle a small town with few pilgrims, this causes the\n";
+							cout<<"population and the people grow with difficulties being an important civilization";
+							cout<<"but not the most powerful or important...";
+							break;
+						}
+					case 2:
+						system("cls");
+						cout<<endl;
+						cout<<"You continue traveling for a long time with your pilgrims until they manage to settle in a\n";
+						cout<<"quite comfortable place, however this town does not grow like something bigger and there are\n";
+						cout<<"like a medium sized town...";
+						break;
+					case 3:
+						if(plantaExtrana>=3){
+							system("cls");
+							cout<<endl;
+							cout<<"After the offering is made, the flood disappears and the ground is illuminated in a great way.\n";
+							cout<<"sun, accompanied by a rainbow so you decide to take it as a sign and decide to settle your\n";
+							cout<<"civilization, together with the guidance of Huitzilopochtli, manage to grow rapidly, becoming\n";
+							cout<<"one of the most important towns in the history of Tenochtitlan...";
+							cout<<endl<<endl;
+							cout<<"**** You have finished the game, thanks for playing ****\n\n";
+							system("pause");
+							return main();
+						}	
+						else{
+							system("cls");
+							cout<<endl;
+							cout<<"You do not have enough to offer Huitzilopochtli so you are not able to ask for his help.\n\n";
+							system("pause");
+							break;
+						}
+					break;	
+				}
+				}while(opcion5==3);
+				}while(opcion5<1||opcion5>3);
+				
+		
+				break;
+			case 3:
+				cout<<endl;
+				cout<<"You decide to continue your journey east.\n\n";
+				system("Pause");
+				do{
+				system("cls");
+				cout<<endl;
+				cout<<"==== In your journey through the east you encounter three obstacles  ====\n";
+				cout<<"==== different ones which do not allow you to continue.                   ====\n";
+				cout<<"==== What path do you decide to take? ====\n\n";
+				cout<<"1. A large cave that at the end you can see light\n";
+				cout<<"2. A log that serves as a bridge to cross a cliff \n";
+				cout<<"3. A swamp that looks quite deep \n";
+				cout<<"Choose an option ";
+				cout<<">> ";
+				cin>>opcion5;
+				
+				switch(opcion5){
+				
+					
+					case 1:
+						cout<<endl;
+						cout<<"You cross the large cave however it is full of poisonous insects\n";
+						cout<<"and you and many pilgrims are poisoning\n";
+						
+						if(florMedicinal>=3){
+							cout<<endl;
+							cout<<"However, since they have several medicinal flowers, they manage to cure everyone.\n\n";
+							cout<<"Upon crossing the cave they continue their journey and create a new civilization,\n";
+							cout<<"However, the place where they settled was not the promised land, for \n";
+							cout<<"so civilization does not prosper as expected.\n\n";
+							system("pause");
+							break;
+						}
+						else{
+							cout<<endl;
+							cout<<"They leave the cave and try to continue with the trip but almost all the pilgrims\n";
+							cout<<"They die along with you so the journey in search of the promised land is a\n";
+							cout<<"failure. \n\n";
+							system("pause");
+							break;
+						}
+					case 2:
+						numeroAletorio=rand()%20+1;
+						if(numeroAletorio<=10){
+							cout<<endl;
+							cout<<"You and a group of pilgrims decide to cross first, however halfway through the journey\n";
+							cout<<"el tronco se rompe por lo que tu y varios peregrinos caen muriendo. \n";
+							cout<<"The trunk breaks so you and several pilgrims fall to their deaths.\n";
+							cout<<"some leave the group and others die. \n";
+							system("pause");
+							break;
+						}
+						else{
+							cout<<endl;
+							cout<<"You and a group of pilgrims decide to cross the log first and they succeed, so the rest\n";
+							cout<<"pilgrims cross and decide to continue with their trip and after months of continuing traveling they manage\n";
+							cout<<"settle, however not in the promised land. \n";
+							system("pause");
+							break;
+						}
+					case 3:
+						cout<<endl;
+						cout<<"You decide to cross the lake, however while they were crossing they are attacked by wild crocodiles\n";
+						cout<<"and in the attack you are killed together with quite a few pilgrims, so the remaining pilgrims are\n";
+						cout<<"left without a guide and try to continue with the trip but as time passes, some leave the group and others die.\n";
+						system("pause");
+						break;
+				}
+				}while(opcion5>3||opcion5<1);
+				
+				break;
+		
+		}
+		
+		}while(opcion4>3||opcion4<1);
+		
+		cout<<endl<<endl;
+		cout<<"**** You have finished the game, thanks for playing ****\n\n";
+		system("pause"); 
+    	system("cls");
+		break;
+				
 	}
-	}*/
+	}
 	}while(opcMenu != 5);
 	
 	}	
-					/*cout<<"Minerales preciosos: "<<mineralesPreciosos<<endl<<endl;
-					cout<<"Vida total: "<<vida<<endl;
-					cout<<"Peregrinos: "<<peregrinos<<endl;
-					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
-					cout<<"Flores medicinales: "<<florMedicinal<<endl;	*/
+				
 
