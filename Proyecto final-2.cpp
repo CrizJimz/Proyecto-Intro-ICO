@@ -131,8 +131,9 @@ int main(){
 			
 			cout<<endl<<endl;
 			system("pause"); cout<<endl;
-			
 			do{
+			do{
+			system("cls");
 			cout<<endl;
 			cout<<"==== Al abandonar Aztlan, la caravana se enfrenta a un rio rugiente. ====\n";
 			cout<<"==== Tres opciones se presentan: ====\n\n";
@@ -188,7 +189,9 @@ int main(){
 					
 			}
 			}while(opcion1==3);
+			}while(opcion1>3||opcion1<1);
 			
+		do{
 		system("cls");
 		cout<<endl;
 		cout<<"==== El viaje lleva a los peregrinos a traves de un implacable     ==== \n";
@@ -258,22 +261,21 @@ int main(){
 							peregrinos=peregrinos-18;
 							cout<<"Vida total: "<<vida<<endl;
 							cout<<"Peregrinos: "<<peregrinos<<endl;
-							system("pause"); 
-							
+							system("pause"); 	
 						}
-							if(numeroAletorio>10){
+						if(numeroAletorio>10){
 							cout<<endl;
-							cout<<"Lograste vencer a los cuervos y los usaron como alimento,sin embargo \nen la batalla murieron 3 peregrinos \n";
+							cout<<"Lograste vencer a los cuervos y los usaron como alimento, sin embargo \nen la batalla murieron 3 peregrinos \n";
 							vida=20;
 							peregrinos=peregrinos-3;
 							cout<<"Vida total: "<<vida<<endl;
 							cout<<"Peregrinos: "<<peregrinos<<endl;
-							system("pause"); 
-							
+							system("pause"); 	
 						}	
 						break;
 					}
 				break;
+			
 			case 3:
 				cout<<endl;
 				cout<<"Siguen con el ritmo, sin embargo mucho de los peregrinos no soportaron las duras condiciones por\n";
@@ -285,7 +287,9 @@ int main(){
 				system("pause"); 
 				break;
 		}
+		}while(opcion2>3||opcion2<1);
 		
+		do{
 		system("cls");
 		cout<<endl;
 		cout<<"==== En el camino a la tierra prometida encuentran un pueblo       ==== \n";
@@ -431,6 +435,8 @@ int main(){
 				system("pause"); 
 				break;
 		}
+		}while(opcion3>3||opcion3<1);
+		
 		do{
 		do{
 		system("cls");
@@ -470,11 +476,11 @@ int main(){
 				cout<<endl;
 				cout<<"Decides continuar su viaje por el este\n\n";
 				system("Pause");
-				
+				do{
 				system("cls");
 				cout<<endl;
-				cout<<"==== En tu transurso del viaje encuentras tres osbtaculos diferentes ====\n";
-				cout<<"==== los cuales no te permiten continuar                             ====\n";
+				cout<<"==== En tu transurso del viaje por el este encuentras tres osbtaculos  ====\n";
+				cout<<"==== diferentes los cuales no te permiten continuar.                   ====\n";
 				cout<<"==== Que camino decides tomar? ====\n\n";
 				cout<<"1.Una gran cueva que al final se puede ver luz \n";
 				cout<<"2.Un tronco que sirve como puente para cruzar un risco \n";
@@ -483,6 +489,7 @@ int main(){
 				cin>>opcion5;
 				
 				switch(opcion5){
+				
 					
 					case 1:
 						cout<<endl;
@@ -533,12 +540,13 @@ int main(){
 						system("pause");
 						break;
 				}
+				}while(opcion5>3||opcion5<1);
 				
 				break;
 		
 		}
 		
-		}while(opcion4>3);
+		}while(opcion4>3||opcion4<1);
 		
 		
 			
