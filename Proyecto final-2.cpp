@@ -46,11 +46,6 @@ int main(){
 	int florMedicinal=0;
 	int plantaExtrana=0;
 	int mineralesPreciosos=0;
-
-	
-	
-	
-	//AQUI PONERR EL IF DE LOS IDIOMAS
 	
 	if(idioma==1){
 	
@@ -156,6 +151,8 @@ int main(){
 						cout<<"guerreros sin dar nada más a cambio hace que ocurra nada, por\n";
 						cout<<"lo que no pasa nada y pierdes -4 Pegrinos\n\n";
 						peregrinos=peregrinos-4;
+						cout<<"Vida total: "<<vida<<endl;
+						cout<<"Peregrinos: "<<peregrinos<<endl;
 						system("pause");
 						break;
 					}else{
@@ -177,7 +174,9 @@ int main(){
 					vida=vida-7;
 					cout<<"Vida total "<<vida<<endl;
 					peregrinos=peregrinos-8;
-					cout<<"Peregrinos restantes "<<peregrinos<<endl;
+					cout<<"Peregrinos: "<<peregrinos<<endl;
+					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+					cout<<"Flores medicinales: "<<florMedicinal<<endl;
 					cout<<endl;
 					system("pause"); 
 					break;
@@ -186,6 +185,14 @@ int main(){
 					cout<<"Decides que es mejor buscar una ruta alternativa a pesar de ser mqs larga\n";
 					cout<<"por lo que despues de dia y medio logran encontrar otra ruta y continuan\n";
 					cout<<"con su viaje, sin embargo los peregrinos sienten molestia. \n\n";
+					cout<<"Vida total: "<<vida<<endl;
+					cout<<"Peregrinos: "<<peregrinos<<endl<<endl;
+					if(florMedicinal>0){
+								cout<<"Flores medicinales: "<<florMedicinal<<endl;
+					}
+					if(plantaExtrana>0){
+						cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+					}
 					system("pause"); 
 					break;
 				
@@ -239,7 +246,7 @@ int main(){
 				cout<<endl;
 				cout<<"Al bajar el ritmo logran administrar mejor sus fuerzas, sin embargo en el\n";
 				cout<<"viaje se encuentran una parvada de buitres que los atacan \n\n";
-				cout<<"Que vas a hacer?\n";
+				cout<<"Que vas a hacer?\n\n";
 				cout<<"1. Huir\n";
 				cout<<"2. Atacar\n";
 				cout<<">> ";
@@ -253,6 +260,13 @@ int main(){
 						peregrinos=peregrinos-10;
 						cout<<"Vida total: "<<vida<<endl;
 						cout<<"Peregrinos: "<<peregrinos<<endl;
+						if(florMedicinal>0){
+							cout<<"Flores medicinales: "<<florMedicinal<<endl;
+						}
+						if(plantaExtrana>0){
+							cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+						}
+						cout<<endl;
 						system("pause"); 
 						break;
 						
@@ -266,6 +280,13 @@ int main(){
 							peregrinos=peregrinos-18;
 							cout<<"Vida total: "<<vida<<endl;
 							cout<<"Peregrinos: "<<peregrinos<<endl;
+							if(florMedicinal>0){
+							cout<<"Flores medicinales: "<<florMedicinal<<endl;
+							}
+							if(plantaExtrana>0){
+							cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+							}
+							cout<<endl;
 							system("pause"); 	
 						}
 						if(numeroAletorio>10){
@@ -275,6 +296,13 @@ int main(){
 							peregrinos=peregrinos-3;
 							cout<<"Vida total: "<<vida<<endl;
 							cout<<"Peregrinos: "<<peregrinos<<endl;
+							if(florMedicinal>0){
+								cout<<"Flores medicinales: "<<florMedicinal<<endl;
+							}
+							if(plantaExtrana>0){
+								cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+							}
+							cout<<endl;
 							system("pause"); 	
 						}	
 						break;
@@ -289,6 +317,13 @@ int main(){
 				peregrinos=peregrinos-29;
 				cout<<"Vida total: "<<vida<<endl;
 				cout<<"Peregrinos: "<<peregrinos<<endl;
+				if(florMedicinal>0){
+					cout<<"Flores medicinales: "<<florMedicinal<<endl;
+				}
+				if(plantaExtrana>0){
+					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+				}
+				cout<<endl;
 				system("pause"); 
 				break;
 		}
@@ -343,14 +378,42 @@ int main(){
 						cout<<endl;
 						cout<<"Decides seguir las intrucciones del chaman y viajar por el sur junto a la guia de las\n";
 						cout<<"estrellas y las aves.\n\n";
+						cout<<"Vida total: "<<vida<<endl;
+						cout<<"Peregrinos: "<<peregrinos<<endl;
+						if(florMedicinal>0){
+							cout<<"Flores medicinales: "<<florMedicinal<<endl;
+						}
+						if(plantaExtrana>0){
+							cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+						}
+						cout<<endl;
 						system("pause");
 						
+						system("cls");
+						cout<<endl;
+						cout<<"==== Llegas hasta donde las aves y estrellas pudieron guiarte y te encuentras un gran      ====\n";
+						cout<<"==== valle, sin embargo ves que en este valle se encuentra plagado de animales peligrosos  ====\n";
+						cout<<"==== Tres opciones se presentan ====\n\n";
+						cout<<"1. Limpiar la zona de los animales peligrosos.\n";
+						cout<<"2. Buscar otra zona paraasentar a tu pueblo.\n";
+						cout<<"3. Esperar a que los animales se vayan.\n\n";
+						cout<<">> ";
+						cin>> opcion5;
 						//ACABAR PARTE DE LA HISTORIA 
 						
 					case 2:
 						system("cls");
 						cout<<endl;
 						cout<<"Decides ignorar el camino que dicta la profecia y decides tomar tu camino.\n\n";
+						cout<<"Vida total: "<<vida<<endl;
+						cout<<"Peregrinos: "<<peregrinos<<endl;
+						if(florMedicinal>0){
+							cout<<"Flores medicinales: "<<florMedicinal<<endl;
+						}
+						if(plantaExtrana>0){
+							cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+						}
+						cout<<endl;
 						system("pause");
 						break;
 						
@@ -362,6 +425,15 @@ int main(){
 							cout<<"aquella tierra prometida la encontraran cuando vean a un aguila posada sobre un nopal\n";
 							cout<<"devorando un aguila.\n\n";
 							plantaExtrana=plantaExtrana-1;
+							cout<<"Vida total: "<<vida<<endl;
+							cout<<"Peregrinos: "<<peregrinos<<endl;
+							if(florMedicinal>0){
+								cout<<"Flores medicinales: "<<florMedicinal<<endl;
+							}
+							if(plantaExtrana>0){
+								cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+							}
+							cout<<endl;
 							system("pause");
 							break;	
 						}
@@ -369,6 +441,15 @@ int main(){
 							system("cls");
 							cout<<endl;
 							cout<<"El chaman no fue capaz de obtener más detalles para su viaje.\n\n";
+							cout<<"Vida total: "<<vida<<endl;
+							cout<<"Peregrinos: "<<peregrinos<<endl;
+							if(florMedicinal>0){
+								cout<<"Flores medicinales: "<<florMedicinal<<endl;
+							}
+							if(plantaExtrana>0){
+								cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+							}
+							cout<<endl;
 							system("pause");
 							break;
 						}
@@ -381,15 +462,22 @@ int main(){
 				}
 				else{
 					cout<<"No tienes suficientes recursos para realaizar un intercambio, por lo que\n";
-					cout<<"algunos peregrinos se quedan y el pueblo los ayuda con comida y flores medicinales\n";
+					cout<<"algunos peregrinos se quedan y el pueblo los ayuda con comida, flores y plantas \n";
 					cout<<"-10 peregrinos\n";
-					cout<<"2-flores medicinales\n";
+					cout<<"2-Flores medicinales\n";
+					cout<<"2-Plantas extranas\n";
+					plantaExtrana=plantaExtrana+2;
 					florMedicinal=florMedicinal+2;
-					peregrinos=peregrinos-29;
+					peregrinos=peregrinos-10;
 					cout<<"Vida total: "<<vida<<endl;
 					cout<<"Peregrinos: "<<peregrinos<<endl;
-					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
-					cout<<"Flores medicinales: "<<florMedicinal<<endl;
+					if(florMedicinal>0){
+						cout<<"Flores medicinales: "<<florMedicinal<<endl;
+					}
+					if(plantaExtrana>0){
+						cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+					}
+					cout<<endl;
 					system("pause"); 
 					break;	
 				}
@@ -402,8 +490,13 @@ int main(){
 					peregrinos=peregrinos-30;
 					cout<<"Vida total: "<<vida<<endl;
 					cout<<"Peregrinos: "<<peregrinos<<endl;
-					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
-					cout<<"Flores medicinales: "<<florMedicinal<<endl;
+					if(florMedicinal>0){
+						cout<<"Flores medicinales: "<<florMedicinal<<endl;
+					}
+					if(plantaExtrana>0){
+						cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+					}
+					cout<<endl;
 					system("pause"); 
 						
 					if(vida<=0){
@@ -457,6 +550,15 @@ int main(){
 		cout<<endl;
 		cout<<"Se quedan donde estan en el campamento improvisado en \n";
 		cout<<"la espera de uns senal, sin embargo no pasa nada\n\n";
+		cout<<"Vida total: "<<vida<<endl;
+		cout<<"Peregrinos: "<<peregrinos<<endl;
+		if(florMedicinal>0){
+			cout<<"Flores medicinales: "<<florMedicinal<<endl;
+		}
+		if(plantaExtrana>0){
+			cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+		}
+		cout<<endl;
 		system("pause");
 		}
 		}while(opcion4==1);
@@ -466,13 +568,22 @@ int main(){
 			case 2:
 				cout<<endl;
 				cout<<"Decides continuar su viaje por el sur\n\n";
+				cout<<"Vida total: "<<vida<<endl;
+				cout<<"Peregrinos: "<<peregrinos<<endl;
+				if(florMedicinal>0){
+					cout<<"Flores medicinales: "<<florMedicinal<<endl;
+				}
+				if(plantaExtrana>0){
+					cout<<"Plantas extranas: "<<plantaExtrana<<endl;
+				}
+				cout<<endl;
 				system("Pause");
 				do{
 				do{
 				system("cls");
 				cout<<endl;
-				cout<<"==== En el viaje llegas a un punto que te llama mucho la atencion donde eres capazver como   ====\n";
-				cout<<"==== muchas aguilas se encuentran merodeando por una zona a pesar del gran diluvio que hay.  ====\n";
+				cout<<"==== En el viaje llegas a un punto que te llama mucho la atencion donde eres capaz de ver como   ====\n";
+				cout<<"==== muchas aguilas se encuentran merodeando por una zona a pesar del gran diluvio que hay.      ====\n";
 				cout<<"==== Tres opciones se presentan ====\n";
 				cout<<"1. Consideras que es una senal, por lo que decides que la civilizacion se asente ahi.\n";
 				cout<<"2. Continuas viajando para seguir buscando un lugar perfecto para empezar su nueva civilizacion.\n";
