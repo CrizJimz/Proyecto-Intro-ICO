@@ -212,6 +212,7 @@ int main(){
 		cout<<"1. Buscar un oasis y recursos en el desierto.\n";
 		cout<<"2. Establecer un ritmo mas lento para conservar energia.\n";
 		cout<<"3. Seguir con el ritmo que llevan hasta salir del desierto.\n\n";
+		cout<<"Elige una opcion ";
 		cout<<">> ";
 		cin>> opcion2;
 		
@@ -338,6 +339,7 @@ int main(){
 		cout<<"1. Intercambiar recursos con los pueblos amistosos.\n";
 		cout<<"2. Atacar el pueblo.\n";
 		cout<<"3. Evitar el contacto con el pueblo y continuar con el viaje.\n\n";
+		cout<<"Elige una opcion ";
 		cout<<">> ";
 		cin>> opcion3;
 		
@@ -360,14 +362,15 @@ int main(){
 					do{
 					system("cls");
 					cout<<endl;
-					cout<<"==== Durante la ceremonia sagrada, un chaman interpreta una profecía                 ====\n";
+					cout<<"==== Durante la ceremonia sagrada, un chaman interpreta una profecia                 ====\n";
 					cout<<"==== que guiará el destino de los peregrinos y esta dice --La tierra que tanto       ====\n";
 					cout<<"==== buscan se encuentra al sur del poblado y su camino sera iluminado por las       ====\n";
-					cout<<"==== por las estrellas en la noche y en el día por el vuelo de las parvadas...--     ====\n";
+					cout<<"==== por las estrellas en la noche y en el dia por el vuelo de las parvadas...--     ====\n";
 					cout<<"==== Tres opciones se presentan: \n\n";
-					cout<<"1. Seguir la dirección indicada por la profecia.\n";
-					cout<<"2. Cuestionar la validez de la profecía y seguir tu propio instinto.\n";
-					cout<<"3. Consultar al chaman por más detalles de la profecía\n\n";
+					cout<<"1. Seguir la direccion indicada por la profecia.\n";
+					cout<<"2. Cuestionar la validez de la profeca y seguir tu propio instinto.\n";
+					cout<<"3. Consultar al chaman por mas detalles de la profecia\n\n";
+					cout<<"Elige una opcion ";
 					cout<<">> ";
 					cin>> opcion4;
 					
@@ -397,6 +400,7 @@ int main(){
 						cout<<"1. Limpiar la zona de los animales peligrosos.\n";
 						cout<<"2. Buscar otra zona paraasentar a tu pueblo.\n";
 						cout<<"3. Esperar a que los animales se vayan.\n\n";
+						cout<<"Elige una opcion ";
 						cout<<">> ";
 						cin>> opcion5;
 						//ACABAR PARTE DE LA HISTORIA 
@@ -481,7 +485,7 @@ int main(){
 					system("pause"); 
 					break;	
 				}
-					
+				break;	
 			case 2:
 				numeroAletorio=rand()%20+1;
 				if(numeroAletorio<=10){
@@ -544,6 +548,7 @@ int main(){
 		cout<<"1. Quedarse por donde estan y crear un campamento, esperando un senal.\n";
 		cout<<"2. Ir al sur.\n";
 		cout<<"3. Ir al este.\n\n";
+		cout<<"Elige una opcion ";
 		cout<<">> ";
 		cin>>opcion4;
 		if(opcion4==1){
@@ -588,6 +593,7 @@ int main(){
 				cout<<"1. Consideras que es una senal, por lo que decides que la civilizacion se asente ahi.\n";
 				cout<<"2. Continuas viajando para seguir buscando un lugar perfecto para empezar su nueva civilizacion.\n";
 				cout<<"3. Decides pedir una senal a Huitzilopochtli para saber que hacer.\n\n";
+				cout<<"Elige una opcion ";
 				cout<<">> ";
 				cin>>opcion5;
 				
@@ -656,6 +662,7 @@ int main(){
 				cout<<"1. Una gran cueva que al final se puede ver luz \n";
 				cout<<"2. Un tronco que sirve como puente para cruzar un risco \n";
 				cout<<"3. Un pantano que se ve bastante profundo \n";
+				cout<<"Elige una opcion ";
 				cout<<">> ";
 				cin>>opcion5;
 				
@@ -728,6 +735,7 @@ int main(){
 	}
 	
 	}
+	/*
 	if(idioma==2){
 		
 		monstrarMenuIng();
@@ -798,9 +806,71 @@ int main(){
 				system("pause"); 
     			system("cls");
 				break;
+				
+			case 1:
+				system("cls");
+				cout<<"It was the dawn of a new era in the lands of Anahuac. Aztlan, the legendary land of \n";
+				cout<<"the Aztecs, was mired in conflict and famine. The council of elders took a \n";
+				cout<<"bold decision: undertake a pilgrimage of 100 people in search of a new promised land. Under the leadership \n";
+				cout<<"of Huitzilihuitl, a brave warrior, and Huitzilopochtli, god of war and patron of the \n";
+				cout<<"Aztecs, the journey to the Valley of Mexico began.";
+				
+				cout<<endl<<endl;
+				system("pause"); cout<<endl;
+				do{
+				do{
+				system("cls");
+				cout<<endl;
+				cout<<"==== Leaving Aztlan, the caravan faces a roaring river. ====\n";
+				cout<<"==== Three options are presented: ====\n\n";
+				cout<<"1. Build rafts and cross in a group. \n";
+				cout<<"2. Find a longer but less dangerous path. \n";
+				cout<<"3. Pay tribute to Tlaloc, the god of rain, to ask for safe passage.\n\n";
+				cout<<"Choose an option >> ";
+				cin>>opcion1;
+				cout<<endl;
 		
+			switch(opcion1){
+				
+					case 3:
+						if(peregrinos>0){
+							cout<<"You decide to pay tribute to Tlaloc, however just sacrificing\n";
+							cout<<"warriors without giving anything else in return makes nothing happen, for\n";
+							cout<<"what nothing happens and you lose -4 Pilgrims\n\n";
+							peregrinos=peregrinos-4;
+							cout<<"Total life: "<<vida<<endl;
+							cout<<"Pilgrims: "<<peregrinos<<endl;
+							system("pause");
+							break;
+						}else{
+							cout<<"You can no longer make sacrifices, you are alone, so you decide to sacrifice yourself.\n";
+							cout<<"You have died and lost the game\n";
+							system("pause"); 
+							return main();
+						}
+					case 1:
+						cout<<"You and your group go to look for materials near the area and manage to find\n";
+						cout<<"fiber and some pieces of wood to be able to pass, in addition to:\n\n";
+						cout<<"2-medicinal flowers\n";
+						cout<<"1-strange plant\n\n";
+						plantaExtrana=plantaExtrana+1;
+						florMedicinal=florMedicinal+2;
+						cout<<"However, when crossing, a water snake bites you and\n";
+						cout<<"you lose -7 life and 8 pilgrims fell into the river \n\n";
+						vida=vida-7;
+						cout<<"Total life "<<vida<<endl;
+						peregrinos=peregrinos-8;
+						cout<<"Pilgrims: "<<peregrinos<<endl;
+						cout<<"strange plants: "<<plantaExtrana<<endl;
+						cout<<"medicinal flowers: "<<florMedicinal<<endl;
+						cout<<endl;
+						system("pause"); 
+						break;	
+						
+						
+						
 	}
-	}
+	}*/
 	}while(opcMenu != 5);
 	
 	}	
