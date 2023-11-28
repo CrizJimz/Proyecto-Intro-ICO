@@ -23,6 +23,15 @@ void mostrarMenu(){
     cout << "5. Salir" << endl;
 }
 
+void monstrarMenuIng(){
+	cout << "=== The Pilgrimage from Aztlan to Tenochtitlan ===" << endl << endl;
+    cout << "1. Play " << endl;
+    cout << "2. Instructions" << endl;
+    cout << "3. About" << endl;
+    cout << "4. Language" << endl;
+    cout << "5. Exit" << endl;
+}
+
 int main(){
 	
 	srand(time(NULL));
@@ -43,6 +52,7 @@ int main(){
 	
 	//AQUI PONERR EL IF DE LOS IDIOMAS
 	
+	if(idioma==1){
 	
 		
 	mostrarMenu();
@@ -606,6 +616,80 @@ int main(){
 		
 	}
 	
+	}
+	if(idioma==2){
+		
+		monstrarMenuIng();
+		cout<<"\n---Select an option";
+		cout<<endl<<">> ";
+		cin >> opcMenu;
+	
+		switch(opcMenu){
+	
+			case 2: 
+				system("cls");
+				cout<<endl<< "==== The theme of the game is based on the possibility of choosing different  ====\n";
+				cout<<"==== options to be able to follow one of the different paths to which         ====\n";
+				cout<<"==== that you will face by using the number keys from 1 to 3  ====";
+				cout<<endl<<endl;
+    			system("pause"); 
+    			system("cls");
+				break;
+	
+			case 3:
+				system("cls");
+				cout<<endl<< "**** Historical Context: The Pilgrimage from Aztlan to Tenochtitlan ****" << endl<<endl;
+				cout<<"---The story of the pilgrimage from Aztlan to Tenochtitlan is inspired by what \n";
+				cout<<"historical and mythological of the Aztec civilization, also known as Mexica.\n";
+				cout<<" \nThis legendary migration is considered a key founding episode in Aztec mythology.\n";
+				cout<<"establishing the foundations for the great civilization that flourished in the Valley of Mexico. \n" ;
+			
+				cout<<endl<< "**** Aztlan: The Place of the Herons ****"<<endl<<endl;
+				cout<<"---Aztlan, according to Aztec legends, was the land of origin of the Aztecs. It is believed that Aztlán \n";
+				cout<<"It was an island or region located somewhere northwest of Mexico, although its exact location \n";
+				cout<<"It is unknown and has become a mythological element. The chronicles say that the Aztecs, \n";
+				cout<<"Led by their god Huitzilopochtli, they undertook an epic journey from Aztlan in search of their definitive home.\n\n";
+				system("pause"); 
+    			system("cls");
+    			
+				break;
+		
+			case 4:
+				do{
+				system("cls");
+				cout<<endl;
+				cout<<"==== The current language is English. Do you want to change it to Spanish? ====\n";
+				cout<<"1. Yes.\n";
+				cout<<"2. No.\n";
+				cout<<">> ";
+				cin>>opcIdioma;
+			
+				switch(opcIdioma){
+					case 1:
+					cout<<"El idioma se ha cambiado a Espanol\n\n";
+					system("pause");
+					idioma=1;
+					return main();
+				
+					case 2:
+						return main();
+				}
+				}while(opcIdioma<1||opcIdioma>2);
+			
+			case 5:
+	
+				cout<<"\n==== You left the game ===="<<endl;
+				return 0;
+			
+			
+			default:
+				cout<<"---It is not a valid option\n";
+				system("pause"); 
+    			system("cls");
+				break;
+		
+	}
+	}
 	}while(opcMenu != 5);
 	
 	}	
