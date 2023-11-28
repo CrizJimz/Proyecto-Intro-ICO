@@ -103,11 +103,6 @@ int main(){
 			}
 			}while(opcIdioma<1||opcIdioma>2);
 			
-			
-			
-			
-			
-			
 		case 5:
 	
 			cout<<"\n==== Saliste del juego ===="<<endl;
@@ -119,18 +114,6 @@ int main(){
 			system("pause"); 
     		system("cls");
 			break;
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			
 		case 1:
 			system("cls");
@@ -159,10 +142,11 @@ int main(){
 				
 				case 3:
 					if(peregrinos>0){
-						cout<<"Decides rendir tributo a Tlaloc, sin embargo no tienes ningun\n";
-						cout<<"guerrero digno de ser tributo debido a la hambruna que sufria\n";
-						cout<<"el pueblo, por lo que no pasa nada y pierdes -1 Pegrino\n\n";
-						peregrinos=peregrinos-1;
+						cout<<"Decides rendir tributo a Tlaloc, sin embargo el solo sacrificar\n";
+						cout<<"guerreros sin dar nada más a cambio hace que ocurra nada, por\n";
+						cout<<"lo que no pasa nada y pierdes -4 Pegrinos\n\n";
+						peregrinos=peregrinos-4;
+						system("pause");
 						break;
 					}else{
 						cout<<"Ya no puedes realizar mas sacrificios, estas solo, por lo que decides sacrificarte\n";
@@ -403,8 +387,8 @@ int main(){
 			case 2:
 				numeroAletorio=rand()%20+1;
 				if(numeroAletorio<=10){
-					cout<<"Fallan a la hora de atacar por lo que pierdes -15 de vida y mueren 30 peregrinos\n";
-					vida=vida-15;
+					cout<<"Fallan a la hora de atacar por lo que pierdes -13 de vida y mueren 30 peregrinos\n";
+					vida=vida-13;
 					peregrinos=peregrinos-30;
 					cout<<"Vida total: "<<vida<<endl;
 					cout<<"Peregrinos: "<<peregrinos<<endl;
@@ -422,11 +406,11 @@ int main(){
 				}
 				else{
 					cout<<"Logran vencer y saquear al pueblo, pero en la pelea mueren 15 peregrinos\n";
-					cout<<"1-plantas enxtranas\n";
-					cout<<"4-plantas medicnales\n";
+					cout<<"3-plantas enxtranas\n";
+					cout<<"3-plantas medicnales\n";
 					cout<<"20-aldeanos esclavizados\n";
-					plantaExtrana=plantaExtrana+1;
-					florMedicinal=florMedicinal+4;
+					plantaExtrana=plantaExtrana+3;
+					florMedicinal=florMedicinal+3;
 					vida=vida;
 					peregrinos=peregrinos-15+20;
 					cout<<"Vida total: "<<vida<<endl;
@@ -473,23 +457,70 @@ int main(){
 				cout<<endl;
 				cout<<"Decides continuar su viaje por el sur\n\n";
 				system("Pause");
+				do{
+				do{
 				system("cls");
 				cout<<endl;
 				cout<<"==== En el viaje llegas a un punto que te llama mucho la atencion donde eres capazver como   ====\n";
 				cout<<"==== muchas aguilas se encuentran merodeando por una zona a pesar del gran diluvio que hay.  ====\n";
 				cout<<"==== Tres opciones se presentan ====\n";
-				cout<<"1. \n";
-				cout<<"2. \n";
-				cout<<"3. \n\n";
+				cout<<"1. Consideras que es una senal, por lo que decides que la civilizacion se asente ahi.\n";
+				cout<<"2. Continuas viajando para seguir buscando un lugar perfecto para empezar su nueva civilizacion.\n";
+				cout<<"3. Decides pedir una senal a Huitzilopochtli para saber que hacer.\n\n";
 				cout<<">> ";
 				cin>>opcion5;
 				
+				switch(opcion5){
+					case 1:
+						if(peregrinos>=52){
+							system("cls");
+							cout<<endl;
+							cout<<"Logras asentar un pequeno pueblo con bastantes peregrinos por lo que permite\n";
+							cout<<"que el crecimiento de la civilizacion sea excepcional convirtiendose en la\n";
+							cout<<"gran Tenochtitlan...";
+							break;
+						}
+						else{
+							system("cls");
+							cout<<endl;
+							cout<<"Intentas asentar un pequeno pueblo con pocos peregrinos, esto causa que la\n";
+							cout<<"población y el pueblo crezcan con dificultades siendo un civilizacion importante";
+							cout<<"pero no la mas poderosa ni importante...";
+							break;
+						}
+					case 2:
+						system("cls");
+						cout<<endl;
+						cout<<"Sigues viajando por largo tiempo con tus peregrinos hasta que lorgan asentarse en un\n";
+						cout<<"lugar bastante comodo, sin embargo este pueblo no crece como algo más grande y quedan\n";
+						cout<<"como un poblado mediano...";
+						break;
+					case 3:
+						if(plantaExtrana>=3){
+							system("cls");
+							cout<<endl;
+							cout<<"Despues de la ofrenda realizada el diluvio desaparece y el terreno se ilumina de una gran\n";
+							cout<<"sol, acompanado de un arcoiris por lo que decides tomarlo como una senal y decides asentar tu\n";
+							cout<<"civilización, junto con la guia de Huitzilopochtli logran crecer rapidamente convirtiendose en\n";
+							cout<<"uno de los pueblo más importantes de la historia Tenochtitlan...";
+							cout<<endl<<endl;
+							cout<<"**** Has terminado el juego, gracias por jugar ****\n\n";
+							system("pause");
+							return main();
+						}	
+						else{
+							system("cls");
+							cout<<endl;
+							cout<<"No tienes lo suficiente que ofrecerle a Huitzilopochtli por lo que no eres capaz de pedir su ayuda\n\n";
+							system("pause");
+							break;
+						}
+					break;	
+				}
+				}while(opcion5==3);
+				}while(opcion5<1||opcion5>3);
 				
-				//plantas extranas 3
-				
-				
-				
-						//AGREGAR OPCIONES FINALES	
+		
 				break;
 			case 3:
 				cout<<endl;
@@ -567,8 +598,6 @@ int main(){
 		
 		}while(opcion4>3||opcion4<1);
 		
-		
-			
 		cout<<endl<<endl;
 		cout<<"**** Has terminado el juego, gracias por jugar ****\n\n";
 		system("pause"); 
