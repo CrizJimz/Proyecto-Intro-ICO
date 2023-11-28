@@ -5,6 +5,14 @@
 
 
 using namespace std;
+	int opcMenu;
+	int idioma=1;
+	int opcIdioma;
+	int opcion1;
+	int opcion2;
+	int opcion3;
+	int opcion4;
+	int opcion5;
 
 void mostrarMenu(){
 	cout << "=== El Peregrinaje de Aztlan a Tenochtitlan ===" << endl << endl;
@@ -15,24 +23,10 @@ void mostrarMenu(){
     cout << "5. Salir" << endl;
 }
 
-
-
 int main(){
 	
 	srand(time(NULL));
 	int numeroAletorio=rand()%20+1;
-	
-	int opcMenu;
-	int idioma=1;
-	int opcIdioma;
-	char exit;
-	
-	int opcion1;
-	int opcion2;
-	int opcion3;
-	int opcion4;
-	int opcion5;
-	
 	
 	system("cls");
 	
@@ -40,8 +34,6 @@ int main(){
 		
 	int peregrinos=100;
 	int vida=25;
-	
-	
 	int florMedicinal=0;
 	int plantaExtrana=0;
 	int mineralesPreciosos=0;
@@ -61,16 +53,18 @@ int main(){
 	switch(opcMenu){
 	
 		case 2: 
+			system("cls");
 			cout<<endl<< "==== La tematica del juego se basa en la posibilidad de elegir diferentes  ====\n";
 			cout<<"==== opciones para poder seguir uno de los distintos caminos a los         ====\n";
 			cout<<"==== que te enfrentaras mediante el uso de la teclas numericas del 1 al 3  ====";
-			cout<<endl<<endl<<endl;
+			cout<<endl<<endl;
     		system("pause"); 
     		system("cls");
     		
 			break;
 	
 		case 3:
+			system("cls");
 			cout<<endl<< "**** Contexto Historico: El Peregrinaje de Aztlan a Tenochtitlan ****" << endl<<endl;
 			cout<<"---La historia del peregrinaje de Aztlan a Tenochtitlan esta inspirada en lo \n";
 			cout<<"historico y mitologico de la civilizacion azteca, tambien conocida como Mexica.\n";
@@ -88,9 +82,26 @@ int main(){
 			break;
 		
 		case 4:
+			do{
+			system("cls");
+			cout<<endl;
+			cout<<"==== El idioma actual se encuentra en Espanol. Desea cambiarlo a Ingles? ====\n";
+			cout<<"1. Si.\n";
+			cout<<"2. No.\n";
+			cout<<">> ";
+			cin>>opcIdioma;
 			
-		
-			
+			switch(opcIdioma){
+				case 1:
+					cout<<"The language has been changed to English\n\n";
+					system("pause");
+					idioma=2;
+					return main();
+				
+				case 2:
+					return main();
+			}
+			}while(opcIdioma<1||opcIdioma>2);
 			
 			
 			
@@ -170,9 +181,9 @@ int main(){
 					cout<<"Sin embargo a la hora de cruzar una serpiente de agua te muerde y\n";
 					cout<<"pierdes -7 de vida y 8 peregrinos cayeron en el rio \n\n";
 					vida=vida-7;
-					cout<<"---Vida total "<<vida<<endl;
+					cout<<"Vida total "<<vida<<endl;
 					peregrinos=peregrinos-8;
-					cout<<"---Peregrinos restantes "<<peregrinos<<endl;
+					cout<<"Peregrinos restantes "<<peregrinos<<endl;
 					cout<<endl;
 					system("pause"); 
 					break;
@@ -337,8 +348,8 @@ int main(){
 						system("cls");
 						cout<<endl;
 						cout<<"Decides seguir las intrucciones del chaman y viajar por el sur junto a la guia de las\n";
-						cout<<"estrellas y las aves.\n";
-						cout<<"";
+						cout<<"estrellas y las aves.\n\n";
+						system("pause");
 						
 						//ACABAR PARTE DE LA HISTORIA 
 						
@@ -462,11 +473,19 @@ int main(){
 				cout<<endl;
 				cout<<"Decides continuar su viaje por el sur\n\n";
 				system("Pause");
-				
 				system("cls");
 				cout<<endl;
-				cout<<"";
+				cout<<"==== En el viaje llegas a un punto que te llama mucho la atencion donde eres capazver como   ====\n";
+				cout<<"==== muchas aguilas se encuentran merodeando por una zona a pesar del gran diluvio que hay.  ====\n";
+				cout<<"==== Tres opciones se presentan ====\n";
+				cout<<"1. \n";
+				cout<<"2. \n";
+				cout<<"3. \n\n";
+				cout<<">> ";
+				cin>>opcion5;
 				
+				
+				//plantas extranas 3
 				
 				
 				
@@ -482,9 +501,9 @@ int main(){
 				cout<<"==== En tu transurso del viaje por el este encuentras tres osbtaculos  ====\n";
 				cout<<"==== diferentes los cuales no te permiten continuar.                   ====\n";
 				cout<<"==== Que camino decides tomar? ====\n\n";
-				cout<<"1.Una gran cueva que al final se puede ver luz \n";
-				cout<<"2.Un tronco que sirve como puente para cruzar un risco \n";
-				cout<<"3.Un pantano que se ve bastante profundo \n";
+				cout<<"1. Una gran cueva que al final se puede ver luz \n";
+				cout<<"2. Un tronco que sirve como puente para cruzar un risco \n";
+				cout<<"3. Un pantano que se ve bastante profundo \n";
 				cout<<">> ";
 				cin>>opcion5;
 				
