@@ -1,2 +1,2 @@
-##Proyecto-Intro-ICO
+#Proyecto-Intro-ICO
 
