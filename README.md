@@ -35,7 +35,34 @@ void monstrarMenuIng(){
 
 ### Sistema de elección
 Para la posibilidad de seleccionar una de las opciones del menu se utilizo la estructura `switch()` la cual nos permite el funcionamiento
-para la mayoria del proyecto, aqui podemos ver el funcionamiento de esta estructura para el menu 
+para la mayoria del proyecto, aqui podemos ver el funcionamiento de esta estructura para el menu.
 
 Para la validacion de datos del usuario se utilizo la estrcutura `do while` con la condicion de `while(opcion1>3||opcion1<1)`, debido 
-a que la jugabilidad del juego se basa en la selección de 3 opciones que se limitan a los valores numéricos del 1 al 3. En algunas partes del codigo de utilizan dobles `do while`, ya que algunas opciones ofrecidas al jugador no daban continuidad a la historia o tenian condicionales que si el usuario no cumplía no permitía el progreso del juego 
+a que la jugabilidad del juego se basa en la selección de 3 opciones que se limitan a los valores numéricos del 1 al 3. En algunas partes del codigo de utilizan dobles `do while`, ya que algunas opciones ofrecidas al jugador no daban continuidad a la historia o tenian condicionales que si el usuario no cumplía no permitía el progreso del juego.
+
+Ejemplo del uso de estas estructuras en la opción Idioma del Menu:
+~~~
+do{
+    system("cls");
+    cout<<endl;
+    cout<<"==== El idioma actual se encuentra en Espanol. Desea cambiarlo a Ingles? ====\n";
+    cout<<"1. Si.\n";
+    cout<<"2. No.\n";
+    cout<<">> ";
+    cin>>opcIdioma;
+
+    switch(opcIdioma){
+        case 1:
+            cout<<"The language has been changed to English\n\n";
+            system("pause");
+            idioma=2;
+            return main();
+
+        case 2:
+            return main();
+    }
+}while(opcIdioma<1||opcIdioma>2);
+~~~
+En este caso al haber solo dos opciones la condición es `while(opcIdioma<1||opcIdioma>2)`.
+
+### Cambio de Idioma
