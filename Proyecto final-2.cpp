@@ -32,6 +32,7 @@ void monstrarMenuIng(){
     cout << "5. Exit" << endl;
 }
 
+
 int main(){
 	
 	srand(time(NULL));
@@ -1478,8 +1479,8 @@ int main(){
 						if(numeroAletorio<=10){
 							cout<<endl;
 							cout<<"You and a group of pilgrims decide to cross first, however halfway through the journey\n";
-							cout<<"el tronco se rompe por lo que tu y varios peregrinos caen muriendo. \n";
-							cout<<"The trunk breaks so you and several pilgrims fall to their deaths.\n";
+							cout<<"the trunk breaks so you and several pilgrims fall to their deaths. \n";
+							cout<<"The pilgrims, left without a leader, try to continue with the trip but with the passage of time\n";
 							cout<<"some leave the group and others die. \n";
 							system("pause");
 							break;
