@@ -103,4 +103,14 @@ Al ya tener nuestro repositorio ya es posible empezar a trabajar el proyecto en 
 Cuando realizamos cambios en el repositorio es necesario subir estos cambios a Git Hub, ya sea que borremos, agregamos o modifiquemos un documento; y para esto debemos utilizar el comando `git add` que va a agregar los cambios que hayamos realizados, para que se puedan subir los cambios es necesario realizar un commit de los cambios realizados, esto quiere decir un comentario o descripción de que cambios realizamos en el repositorio para poder llevar un control mejor de los cambios que se realizan durante el trabajo en el repositorio, para esto debe utilizarse se utiliza el comando `git commit`.
 #### Git push
 Finalmente para poder subir los cambios realizados se utitiliza el comando `git push` que sube todos los archivos al repositorio el Git Hub.
-#### Ejemplo 
+### Gestionar las versiones del proyecto 
+Para poder ver los cambios que se han realizado en el repositorio se debe utilizar el comando `git log ` que nos permite  ver los commits realizados junto consu identificador y para poder el repositorio en esa versión debe utilizarse el comando `git checkout "identificador del commit"` para poder ir a esa versión.
+
+Aquí un ejemplo de su uso:
+
+Validación de opciones: `commit 7f00e31`
+
+![image](https://github.com/CrizJimz/Proyecto-Intro-ICO/assets/145381565/ced86ab2-144e-41b4-9d29-2259f37d501e)
+
+### Git pull
+`Git pull` nos va a permititr descargar cambios que se hayan realizado en el repositorio pero no en nuetro dispositivo local para mantenernos al día con el estado del proyecto.
