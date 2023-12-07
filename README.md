@@ -1,12 +1,12 @@
 # Proyecto-Intro-ICO
 Repositorio del proyecto final del Prof. Candelario subido a git hub, el cual consiste en la
-elaboracion de un juego que permite al usuario interactuar con el juego, afectando las
-desiciones que toma esta en la historia del juego. 
+elaboración de un juego que permite al usuario interactuar con el juego, afectando las
+decisiones que toma esta en la historia del juego. 
 
-## El Peregrinaje de Aztlan a Tenochtitlan
+## El Peregrinaje de Aztlán a Tenochtitlan
 Es una historia ambientada  
 
-## Funcionamiento del codigo
+## Funcionamiento del Código
 
 ### Menus
 Iniciamos con la funcion `void mostrarMenu()`, y como su mismo nombre lo indica funciona para poder imprimir en pantalla
@@ -37,8 +37,7 @@ void monstrarMenuIng(){
 Para la posibilidad de seleccionar una de las opciones del menu se utilizo la estructura `switch()` la cual nos permite el funcionamiento
 para la mayoria del proyecto, aqui podemos ver el funcionamiento de esta estructura para el menu.
 
-Para la validacion de datos del usuario se utilizo la estrcutura `do while` con la condicion de `while(opcion1>3||opcion1<1)`, debido 
-a que la jugabilidad del juego se basa en la selección de 3 opciones que se limitan a los valores numéricos del 1 al 3. En algunas partes del codigo de utilizan dobles `do while`, ya que algunas opciones ofrecidas al jugador no daban continuidad a la historia o tenian condicionales que si el usuario no cumplía no permitía el progreso del juego.
+Para la validacion de datos del usuario se utilizo la estrcutura `do while` con la condicion de `while(opcion1>3||opcion1<1)`, la hace que el usuario tenga que elegir una opción valida o diferente a la que escogió, debido a que la jugabilidad del juego se basa en la selección de 3 opciones que se limitan a los valores numéricos del 1 al 3. En algunas partes del codigo de utilizan **dobles** `do while`, ya que algunas opciones ofrecidas al jugador no daban continuidad a la historia o tenian condicionales que si el usuario no cumplía no permitía el progreso del juego.
 
 Ejemplo del uso de estas estructuras en la opción Idioma del Menu:
 ~~~
@@ -87,6 +86,21 @@ if(idioma==2){
     //Programa en Ingles
 }
 ~~~
+## Uso de Git Hub en el proyecto 
+### Inicio del repositorio
+Para el seguimiento del progreso del proyecto primero se inició un repositorio mediante Git Hub y para esto era necesario tener una cuenta creda y desde la misma pagina y en la sección de repositorios seleccioanr la opción **New**, la cual nos permite la creación de nuestro repositorio.
 
 
+![image](https://github.com/CrizJimz/Proyecto-Intro-ICO/assets/145381565/89cf4129-a6c7-4c84-8950-b78a3a9ef836)
 
+### Clonación del repositorio
+Despues de la creación de repositorio es necesario clonar el repositorio en el dispositivo local y si es posible en una carpeta en específico para esto se utiliza el comando `git clone "Url del repositorio a clonar"`.
+
+### Actualización del proyecto
+#### Git status
+Al ya tener nuestro repositorio ya es posible empezar a trabajar el proyecto en un espacio donde se pueda llevar una gestión de progreso del proyecto. Cuando agregamos nuevos archivos o modificamos los existentes lo primero que podemos hacer para saber el estado del proyecto es utilizar el comando `git status` que nos permite visualizar el estado del proyecto desde nuiestro dispositivo local, esto quiere decir que si realizamos algún cambio y no lo subimos este nos avisara  o por el contrario si borramos un archivo y no subimos la actualización de esto a git hub tambien nos avisara.
+#### Git add y Git commit 
+Cuando realizamos cambios en el repositorio es necesario subir estos cambios a Git Hub, ya sea que borremos, agregamos o modifiquemos un documento; y para esto debemos utilizar el comando `git add` que va a agregar los cambios que hayamos realizados, para que se puedan subir los cambios es necesario realizar un commit de los cambios realizados, esto quiere decir un comentario o descripción de que cambios realizamos en el repositorio para poder llevar un control mejor de los cambios que se realizan durante el trabajo en el repositorio, para esto debe utilizarse se utiliza el comando `git commit`.
+#### Git push
+Finalmente para poder subir los cambios realizados se utitiliza el comando `git push` que sube todos los archivos al repositorio el Git Hub.
+#### Ejemplo 
