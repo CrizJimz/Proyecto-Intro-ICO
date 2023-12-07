@@ -66,3 +66,27 @@ do{
 En este caso al haber solo dos opciones la condición es `while(opcIdioma<1||opcIdioma>2)`.
 
 ### Cambio de Idioma
+Para poder realizar el cambio de idioma en el juego simplemente se repitió el codigo existente y el texto que se imprimia en pantalla se tradijo a ingles, la estructura del juego en ingles es la misma que el que esta en Español y con sus mismas variables. Para poder identificar si el juego debía de cambiar de idioma se utilizó un `if` y la variable `idioma` el cual tenia dos valores **1=Español** y **2=Ingles.**
+
+~~~
+if(idioma==1){
+    mostrarMenu();
+    cout<<"\n---Selecciona una opcion";
+    cout<<endl<<">> ";
+    cin >> opcMenu;
+
+    //Programa en Español
+}
+
+if(idioma==2){
+    monstrarMenuIng();
+    cout<<"\n---Select an option";
+    cout<<endl<<">> ";
+    cin >> opcMenu;
+
+    //Programa en Ingles
+}
+~~~
+
+
+
